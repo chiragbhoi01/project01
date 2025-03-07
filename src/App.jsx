@@ -1,15 +1,15 @@
-import brandLogo from "../src/assets/image/Miss-Gypsy-Logo.png";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import { Route } from 'react-router';
+import {  About, Category, Footer ,Header , Home  } from './index';
 import './index.css'
+import { Routes } from 'react-router';
 
 function App() {
   return (
     <>
-    <Header/>
-    <Hero/>
-    <Footer/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+    </Routes>
     </>
   );
 }
