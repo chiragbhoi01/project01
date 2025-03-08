@@ -1,12 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaRegUserCircle, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { useState } from "react";
-import {brandLogo} from "../index";
-
+import {BrandLogo} from '../image'
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isSearchOpen, setSearchOpen] = useState(false);
-
   // Toggle search input visibility on click
   const toggleSearch = () => {
     setSearchOpen(!isSearchOpen);
@@ -18,7 +16,7 @@ function Header() {
         <div className="flex items-center justify-between max-w-screen-xl mx-auto">
           {/* Logo (Always visible on mobile and desktop) */}
           <Link to="/" aria-label="Go to homepage">
-            <img className="w-50" src={brandLogo} alt="Logo" />
+            <img className="w-50" src={BrandLogo} alt="Logo" />
           </Link>
 
           {/* Desktop Navigation Links */}

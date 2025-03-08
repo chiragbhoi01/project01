@@ -1,5 +1,5 @@
 import React from 'react';
-import brandLogo from "../assets/image/Miss-Gypsy-Logo.png";
+import {BrandLogo} from '../image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -9,7 +9,7 @@ function Footer() {
     <footer className="bg-white p-6 md:p-10 flex flex-col md:flex-row justify-between max-w-screen mx-auto items-center space-y-8 md:space-y-0">
       {/* Brand Logo and Description */}
       <div id="brandLogo" className="flex flex-col items-center justify-center mb-4 md:mb-0 mx-4 text-center">
-        <img src={brandLogo} alt="Brand Logo" className="w-32 h-auto mb-3" />
+        <img src={BrandLogo} alt="Brand Logo" className="w-32 h-auto mb-3" />
         <p className="text-sm md:text-base ">
           Discover the beauty of unique, handcrafted jewelry that tells your story
         </p>
