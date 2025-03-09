@@ -16,6 +16,7 @@ import {
   BannerChokers,
   BannerEarrings,
   BannerHasli,
+  BannerNecklace
 } from "../image";
 
 
@@ -60,6 +61,15 @@ export default function HeroSlider() {
             <img
               src={BannerEarrings}
               alt="Slide 3"
+              className="w-full h-auto object-cover"
+            />
+          </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link to="/necklase">
+            <img
+              src={BannerNecklace}
+              alt="Slide 4"
               className="w-full h-auto object-cover"
             />
           </Link>

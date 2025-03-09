@@ -5,7 +5,6 @@ import { BrandLogo } from "../image";
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-
   return (
     <header className="shadow bg-white sticky top-0 z-10 ">
       <nav className="px-4 py-2">
@@ -45,9 +44,29 @@ function Header() {
                   className={({ isActive }) =>
                     isActive ? "text-red-500 hover:underline" : ""
                   }
+                  to="/collection"
+                >
+                  Collections
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-red-500 hover:underline" : ""
+                  }
+                  to="/categories"
+                >
+                  Categories
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "text-red-500 hover:underline" : ""
+                  }
                   to="/about"
                 >
-                  About
+                  About Us
                 </NavLink>
               </li>
               <li>
@@ -58,26 +77,6 @@ function Header() {
                   to="/contact"
                 >
                   Contact
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-red-500 hover:underline" : ""
-                  }
-                  to="/collection"
-                >
-                  Collection
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? "text-red-500 hover:underline" : ""
-                  }
-                  to="/newarrival"
-                >
-                  Categories
                 </NavLink>
               </li>
             </ul>
@@ -141,7 +140,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink className="text-lg" to="/">
+              <NavLink className="text-lg" to="/about">
                 About
               </NavLink>
             </li>
