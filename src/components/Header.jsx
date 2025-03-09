@@ -2,9 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import { FaRegUserCircle, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { BrandLogo } from "../image";
-function Header() {
+function Header({}) {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
+  const [itemCount, setitemCount] = useState();
   return (
     <header className="shadow bg-white sticky top-0 z-10 ">
       <nav className="px-4 py-2">
@@ -86,11 +86,17 @@ function Header() {
             {/* Cart and Login Icons on Desktop */}
             <div className="flex items-center space-x-5">
               <NavLink
-                className="text-2xl text-gray-600"
+                className="relative flex items-center text-2xl text-gray-600"
                 to="/cart"
                 aria-label="Shopping cart"
               >
                 <FaShoppingCart />
+
+                {itemCount > 0 && (
+                  <div className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {itemCount}
+                  </div>
+                )}
               </NavLink>
               <NavLink
                 className="text-2xl text-gray-600"
