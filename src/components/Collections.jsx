@@ -1,10 +1,10 @@
 import React from 'react'
-import Necklase from '../pages/OurCategory/Necklase'
+import NecklaceCollection from '../pages/OurCategory/NecklaceCollection'
 
 function Collections() {
   return (
     <div>
-        <Necklase/>
+        <NecklaceCollection/>
     </div>
   )
 }
