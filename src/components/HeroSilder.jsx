@@ -6,27 +6,19 @@ import {
   Autoplay,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; // Correct react-router package import
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import {
-  BannerBanglesCollection,
-  BannerChokers,
-  BannerEarrings,
-  BannerHasli,
-  BannerNecklace
-} from "../image";
-
-
+import BannerData from "../../public/images/HeroSilder/BannerData"; // Ensure this path is correct
 
 export default function HeroSlider() {
   // Swiper settings
   const swiperSettings = {
     modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
     spaceBetween: 50,
-    slidesPerView: 1, // Change to 1 for a single slide view
+    slidesPerView: 1, // Single slide per view
     navigation: true,
     pagination: { clickable: true },
     autoplay: {
@@ -37,52 +29,18 @@ export default function HeroSlider() {
 
   return (
     <>
-      <Swiper {...swiperSettings} className="flex w-10/11 my-2">
-        <SwiperSlide>
-          <Link to="/">
-            <img
-              src={BannerBanglesCollection}
-              alt="Slide 1"
-              className="w-full h-auto object-cover"
-            />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/">
-            <img
-              src={BannerChokers}
-              alt="Slide 2"
-              className="w-full h-auto object-cover"
-            />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/">
-            <img
-              src={BannerEarrings}
-              alt="Slide 3"
-              className="w-full h-auto object-cover"
-            />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/necklase">
-            <img
-              src={BannerNecklace}
-              alt="Slide 4"
-              className="w-full h-auto object-cover"
-            />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/">
-            <img
-              src={BannerHasli}
-              alt="Slide 4"
-              className="w-full h-auto object-cover"
-            />
-          </Link>
-        </SwiperSlide>
+      <Swiper {...swiperSettings} className="flex mx-auto w-full sm:w-10/12 lg:w-11/12 my-2">
+        {Object.values(BannerData).map((banner, index) => (
+          <SwiperSlide key={index}>
+            <Link to="/">
+              <img
+                src={banner}
+                alt={`banner-${index}`}
+                className="object-cover w-full h-60 sm:h-80 md:h-96 lg:h-112 xl:h-128"
+              />
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

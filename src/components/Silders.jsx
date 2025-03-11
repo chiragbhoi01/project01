@@ -7,7 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // Reusable component to display a Swiper with a set of images
-function Silders({ images, backgroundImage, BannerTittle }) {
+function Silders({ images,  BannerTittle ,backgroundImage }) {
   return (
     <div>
       <div
@@ -55,11 +55,11 @@ function Silders({ images, backgroundImage, BannerTittle }) {
               },
             }}
           >
-            {images.map((image, index) => (
+            {images.map((list, index) => (
               <SwiperSlide key={index} className="flex justify-center">
                 <img
-                  src={image.img}
-                  alt={image.alt}
+                  src={list.image}
+                  alt={list.name}
                   className="w-auto m-auto h-80 object-cover rounded-lg shadow-lg"
                 />
               </SwiperSlide>

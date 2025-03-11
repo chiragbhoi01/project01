@@ -6,6 +6,29 @@ function Ebay() {
   const [clickedCategory, setClickedCategory] = useState(null); // State for click
 
   const CategoryTitle = [
+    
+    {
+      navTitle: "Explore",
+      id: "electronics", // Added ID for matching purposes
+      subCategoryOneName: 'Most popular categories',
+      subCategoryTwoName: 'Most categories',
+      subCategories1: [
+        { subName: "Smartphones and accessories", id: crypto.randomUUID() },
+        { subName: "Computers and tablets", id: crypto.randomUUID() },
+        { subName: "Cameras and photos", id: crypto.randomUUID() },
+        { subName: "Camera drones", id: crypto.randomUUID() },
+        { subName: "Refurbished", id: crypto.randomUUID() },
+        { subName: "Smart home", id: crypto.randomUUID() },
+      ],
+      subCategories2: [
+        { subName: "Laptops and accessories", id: crypto.randomUUID() },
+        { subName: "Wearable tech", id: crypto.randomUUID() },
+        { subName: "Gaming consoles", id: crypto.randomUUID() },
+        { subName: "Headphones and earphones", id: crypto.randomUUID() },
+        { subName: "TVs and Home Entertainment", id: crypto.randomUUID() },
+        { subName: "Speakers and sound systems", id: crypto.randomUUID() },
+      ],
+    },
     {
       navTitle: "Electronics",
       id: "electronics", // Added ID for matching purposes
@@ -165,6 +188,8 @@ function Ebay() {
   ];
 
   const categoriesLinks = [
+    {id : "explore" , name : 'Explore'},
+    {id : "Saved" , name : 'Saved'},
     { id: "electronics", name: 'Electronics' },
     { id: "motors", name: 'Motors' },
     { id: "fashion", name: 'Fashion' },
@@ -182,9 +207,7 @@ function Ebay() {
   };
 
   // Toggle clicked category
-  const handleCategoryClick = (categoryName) => {
-    setClickedCategory((prevCategory) => prevCategory === categoryName ? null : categoryName); // Toggle clicked category
-  };
+  
 
   return (
     <div className="flex flex-col">
@@ -194,12 +217,12 @@ function Ebay() {
           className="flex bg-amber-300 mx-5 p-3 cursor-pointer"
           onMouseEnter={() => handleCategoryHover(category.name)} // Set category name when hovered
           onMouseLeave={() => setHoveredCategory(null)} // Reset hover when mouse leaves
-          onClick={() => handleCategoryClick(category.name)} // Toggle category on click
+        
         >
           {category.name}
 
           {/* Conditionally render Subcategory based on hovered or clicked category */}
-          {(hoveredCategory === category.name || clickedCategory === category.name) && (
+          {(hoveredCategory === category.name && 
             // Filter CategoryTitle based on the category name
             <Subcategory 
               CategoryTitle={CategoryTitle.filter(item => item.navTitle === category.name)}
