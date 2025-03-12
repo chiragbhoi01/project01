@@ -52,10 +52,10 @@ function LoginForm() {
   };
 
   return (
-    <div className="max-w-screen-md mx-auto min-h-screen flex items-center justify-center">
+    <div className="max-w-screen-sm mx-auto min-h-screen flex items-center justify-center px-4">
       <div className="flex w-full bg-gradient-to-r from-[#f87060] to-[#102542] rounded-lg shadow-lg overflow-hidden">
         {/* Left side image */}
-        <div className="flex w-1/2">
+        <div className="flex w-full md:w-1/2">
           <img src={loginright} className="w-full h-full object-cover" alt="Login Right Side" />
         </div>
 
@@ -67,9 +67,9 @@ function LoginForm() {
             backgroundPosition: 'center',
             color: '#fff'
           }}
-          className="flex items-center justify-center w-1/2 bg-cover"
+          className="flex items-center justify-center w-full md:w-1/2 bg-cover"
         >
-          <form onSubmit={handleSubmit} className="w-full p-12 space-y-6 bg-opacity-60 bg-[#102542] rounded-xl">
+          <form onSubmit={handleSubmit} className="w-full p-6 sm:p-12 space-y-6 bg-opacity-70 bg-[#102542] rounded-2xl shadow-xl">
             <div className="text-center space-y-3">
               <h2 className="text-4xl font-bold text-white">WELCOME BACK!</h2>
               <p className="text-lg text-white">Please log in to your account</p>
@@ -79,7 +79,7 @@ function LoginForm() {
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-lg text-white">Email</label>
                   <input
-                    className="p-3 rounded-xl bg-gray-200 w-full focus:ring-2 focus:ring-[#f87060]"
+                    className="p-4 rounded-xl bg-gray-200 w-full focus:ring-4 focus:ring-[#f87060] focus:outline-none transition ease-in-out duration-300"
                     type="email"
                     placeholder="Enter your email"
                     name="email"
@@ -95,7 +95,7 @@ function LoginForm() {
                 <div className="space-y-2 relative">
                   <label htmlFor="password" className="text-lg text-white">Password</label>
                   <input
-                    className="p-3 rounded-xl bg-gray-200 w-full focus:ring-2 focus:ring-[#f87060] placeholder:caret-black"
+                    className="p-4 rounded-xl bg-gray-200 w-full focus:ring-4 focus:ring-[#f87060] focus:outline-none transition ease-in-out duration-300"
                     type={passwordVisible ? 'text' : 'password'} // Toggle type based on passwordVisible
                     placeholder="Enter your password"  
                     name="password"
@@ -106,7 +106,7 @@ function LoginForm() {
                   <button
                     type="button"
                     onClick={togglePasswordVisibility}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#f87060]"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#f87060] hover:text-[#f55b4f] focus:outline-none"
                   >
                     {passwordVisible ? 'Hide' : 'Show'}
                   </button>
@@ -116,7 +116,7 @@ function LoginForm() {
 
                 {/* Submit Button */}
                 <div className="mt-6">
-                  <button type="submit" className="bg-[#f87060] text-white p-3 w-full rounded-xl hover:bg-[#f55b4f] transition">
+                  <button type="submit" className="bg-[#f87060] text-white p-4 w-full rounded-xl hover:bg-[#f55b4f] transition ease-in-out duration-200 transform hover:scale-105">
                     Sign In
                   </button>
                 </div>

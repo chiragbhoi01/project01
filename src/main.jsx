@@ -1,20 +1,19 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import { BrowserRouter } from "react-router";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import RegisterForm from "./components/Login_Register/RegisterFrom";
-import Login from "./components/Login_Register/LoginForm";
+import Layout from "./Layout";
+import { BrowserRouter } from "react-router-dom"; // Corrected the import for BrowserRouter
+import {Footer, Header} from '../src/index'
+
 
 const root = document.getElementById("root");
 
-
 ReactDOM.createRoot(root).render(
-  <BrowserRouter>
-  <Header/>
-  <App/>
-  <Footer/>
-  </BrowserRouter>
- 
+  <StrictMode>
+    <BrowserRouter>
+      <Header />
+      <Layout />
+      <Footer/>
+      
+    </BrowserRouter>
+  </StrictMode>
 );
