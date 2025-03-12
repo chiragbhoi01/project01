@@ -2,14 +2,7 @@ import React from "react";
 
 import Silders from "../../components/Silders"; // Importing the Silders component
 import ItemCollection from "../../components/ItemCollection";
-const options = [
-  "Best Selling",
-  "Price, Low to High",
-  "Price, High to Low",
-  "Alphabetically, A-Z",
-  "Alphabetically, Z-A",
 
-];
 import NecklaceData from "../../../public/images/shopbycategory/necklace/NecklaceData";
 import BannerData from "../../../public/images/HeroSilder/BannerData";
 function NecklaceCollection() {
@@ -26,7 +19,7 @@ function NecklaceCollection() {
       />
       <ItemCollection
         items={NecklaceData}
-        options={options}
+        
       />
     </div>
     

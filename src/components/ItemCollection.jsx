@@ -7,12 +7,38 @@ function ItemCollection({ items }) {
     e.target.src = "path/to/fallback-image.jpg"; // Fallback image path
   };
 
+  const options = [
+    "Best Selling",
+    "Price, Low to High",
+    "Price, High to Low",
+    "Alphabetically, A-Z",
+    "Alphabetically, Z-A",
+  ];
+
   return (
     <div className="p-4">
-      <div id="firstNav" className="my-4">
-        <h1 className="text-center font-bold text-3xl mb-4">
-          Necklace Jewelry Collections
-        </h1>
+      <div id="navs" className="my-4">
+        <div id="navFirst">
+          <h1 className="text-center font-bold text-3xl mb-4">
+            Necklace Jewelry Collections
+          </h1>
+        </div>
+        <div id="navSecond" className="flex justify-between">
+          <h1 className="text-center bg-blue-200">
+            <span className="font-bold bg-sky-300 p-1 rounded">
+              Products : {items.length}
+            </span>
+          </h1>
+          <span>
+            <select className="font-bold bg-sky-300 p-1 rounded" name="filter" id="filter">
+              {
+                options.map((option, index) => (
+                  <option key={index} className="bg-white">{option}</option>
+                ))
+              }
+            </select>
+          </span>
+        </div>
       </div>
 
       <div id="productCards" className="grid place-content-center p-5">
@@ -51,9 +77,9 @@ function ItemCollection({ items }) {
                 <p className="text-sm text-gray-700 mt-2">{item.description}</p>
 
                 {/* "Add to Cart" Button */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolutem mt-8 inset-0 flex items-center justify-center opacity-100 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 sm:opacity-100 sm:group-hover:opacity-100">
                   <button
-                    className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600"
+                    className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 focus:outline-none"
                     aria-label={`Add ${item.name} to cart`}
                   >
                     Add to Cart

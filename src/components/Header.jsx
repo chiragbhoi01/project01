@@ -124,7 +124,7 @@ function Header() {
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <NavLink
-                      to="/profile"
+                      to="/login"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
                       Login
