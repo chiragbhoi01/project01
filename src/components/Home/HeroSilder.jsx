@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import BannerData from "../../../public/images/HeroSilder/BannerData"; // Ensure this path is correct
+import BannerData from "../../assets/image/HeroSilder/BannerData"; // Ensure this path is correct
 
 export default function HeroSlider() {
   // Swiper settings
@@ -32,7 +32,7 @@ export default function HeroSlider() {
       <Swiper {...swiperSettings} className="flex mx-auto w-full sm:w-10/12 lg:w-11/12 my-2">
         {Object.values(BannerData).map((banner, index) => (
           <SwiperSlide key={index}>
-            <Link to="/">
+            <Link to={`/ ${banner}`}>
               <img
                 src={banner}
                 alt={`banner-${index}`}

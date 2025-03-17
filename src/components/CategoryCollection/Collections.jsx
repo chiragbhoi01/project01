@@ -1,11 +1,15 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom'; // Correctly import Routes and Route from react-router-dom
-import HasliCollection from './HasliCollection';
+import HasliCollection from './CollectionSections/HasliCollection';
+import LokaCollection from './CollectionSections/LokaCollection';
+import NakshatraCollection from './CollectionSections/NakshatraCollection';
 
 function Collections() {
   return (
-    <HasliCollection/>
-
+        <>
+        <HasliCollection/>
+        <LokaCollection/>
+        <NakshatraCollection/>
+        </>
   );
 }
 

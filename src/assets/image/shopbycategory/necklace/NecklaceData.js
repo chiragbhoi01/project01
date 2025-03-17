@@ -1,11 +1,33 @@
- const NecklaceData = [
+// Importing images
+import necklace1 from "../necklace/necklace1.jpg";
+import necklace2 from "../necklace/necklace2.jpg";
+import necklace3 from "../necklace/necklace3.jpg";
+import necklace4 from "../necklace/necklace4.jpg";
+import necklace5 from "../necklace/necklace5.jpg";
+import necklace6 from "../necklace/necklace6.jpg";
+import necklace7 from "../necklace/necklace7.jpg";
+import necklace8 from "../necklace/necklace8.jpg";
+import necklace9 from "../necklace/necklace9.jpg";
+import necklace10 from "../necklace/necklace10.jpg";
+import necklace11 from "../necklace/necklace11.jpg";
+import necklace12 from "../necklace/necklace12.jpg";
+import necklace13 from "../necklace/necklace13.jpg";
+import necklace14 from "../necklace/necklace14.jpg";
+import necklace15 from "../necklace/necklace15.jpg";
+import necklace16 from "../necklace/necklace16.jpg";
+import necklace17 from "../necklace/necklace17.jpg";
+import necklace18 from "../necklace/necklace18.jpg";
+import necklace19 from "../necklace/necklace19.jpg";
+
+export const NecklaceData = [
   {
     name: "Round Kempu Jadau Antique Hasli Necklace",
     price: 16899,
     availability: "Ready to Ship",
     description: "A beautiful round kempu jadau antique design hasli necklace.",
     rating: 4.5,
-    image: "images/shopbycategory/necklace/necklace1.jpg"
+    image: necklace1, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Classic Peacock Oxidized Silver Hasli Necklace",
@@ -13,7 +35,8 @@
     availability: "Ready to Ship",
     description: "Classic peacock oxidized silver design with a traditional hasli necklace.",
     rating: 4.7,
-    image: "images/shopbycategory/necklace/necklace2.jpg"
+    image: necklace2, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Vikata Antique Temple Beads Silver Necklace",
@@ -21,7 +44,8 @@
     availability: "Sold Out",
     description: "A unique temple beads design in antique finish, now sold out.",
     rating: 4.2,
-    image: "images/shopbycategory/necklace/necklace3.jpg"
+    image: necklace3, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Mayurika Antique Gold Finish Silver Hasli Necklace",
@@ -29,7 +53,8 @@
     availability: "Ready to Ship",
     description: "An antique gold finish hasli necklace with Mayurika design.",
     rating: 4.6,
-    image: "images/shopbycategory/necklace/necklace4.jpg"
+    image: necklace4, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Amaira Pearl Short Silver Necklace",
@@ -37,7 +62,8 @@
     availability: "Ready to Ship",
     description: "A short silver necklace adorned with Amaira pearls.",
     rating: 4.8,
-    image: "images/shopbycategory/necklace/necklace5.jpg"
+    image: necklace5, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Blossom Veil Blooming Silver Short Necklace",
@@ -45,7 +71,8 @@
     availability: "Sale",
     description: "Blooming design with a silver short necklace, on sale from Rs. 16899.",
     rating: 4.4,
-    image: "images/shopbycategory/necklace/necklace6.jpg"
+    image: necklace6, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Fiorella CZ Silver Necklace",
@@ -53,7 +80,8 @@
     availability: "New",
     description: "A stunning Fiorella CZ silver necklace, a new addition to the collection.",
     rating: 4.9,
-    image: "images/shopbycategory/necklace/necklace7.jpg"
+    image: necklace7, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Green Elegance Moissanite Silver Necklace",
@@ -61,7 +89,8 @@
     availability: "Ready to Ship",
     description: "Elegance in green, featuring Moissanite stones set in silver.",
     rating: 4.6,
-    image: "images/shopbycategory/necklace/necklace8.jpg"
+    image: necklace8, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Angelic CZ Silver Necklace",
@@ -69,7 +98,8 @@
     availability: "Ready to Ship",
     description: "Angelic design with CZ stones in a stunning silver necklace.",
     rating: 4.3,
-    image: "images/shopbycategory/necklace/necklace9.jpg"
+    image: necklace9, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Matsya Pearl String Silver Necklace",
@@ -77,7 +107,8 @@
     availability: "Ready to Ship",
     description: "A pearl string silver necklace with Matsya motifs, ready to ship.",
     rating: 4.7,
-    image: "images/shopbycategory/necklace/necklace10.jpg"
+    image: necklace10, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Tushita Pearl Silver Choker",
@@ -85,7 +116,8 @@
     availability: "Ready to Ship",
     description: "A pearl silver choker necklace in the Tushita design.",
     rating: 4.8,
-    image: "images/shopbycategory/necklace/necklace11.jpg"
+    image: necklace11, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Matsya Pearl String Statement Silver Necklace",
@@ -93,7 +125,8 @@
     availability: "Ready to Ship",
     description: "A statement necklace with Matsya pearl strings and intricate design.",
     rating: 4.5,
-    image: "images/shopbycategory/necklace/necklace12.jpg"
+    image: necklace12, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Forever CZ Delicate Silver Layered Charm Necklace",
@@ -101,7 +134,8 @@
     availability: "Ready to Ship",
     description: "A delicate CZ charm necklace with silver layers, available now.",
     rating: 4.6,
-    image: "images/shopbycategory/necklace/necklace13.jpg"
+    image: necklace13, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Seraphina CZ Silver Necklace",
@@ -109,7 +143,8 @@
     availability: "New",
     description: "A luxurious Seraphina CZ silver necklace with stunning design.",
     rating: 4.9,
-    image: "images/shopbycategory/necklace/necklace14.jpg"
+    image: necklace14, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Aarzoo Moissanites and Gemstone Silver Layered Necklace",
@@ -117,7 +152,8 @@
     availability: "New",
     description: "A layered necklace featuring Moissanite stones and gemstones.",
     rating: 4.4,
-    image: "images/shopbycategory/necklace/necklace15.jpg"
+    image: necklace15, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Maithili Kempu Jadau Silver Necklace",
@@ -125,7 +161,8 @@
     availability: "Ready to Ship",
     description: "A traditional Kempu Jadau silver necklace with intricate design.",
     rating: 4.7,
-    image: "images/shopbycategory/necklace/necklace16.jpg"
+    image: necklace16, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Dune Descent Silver Cuff Necklace",
@@ -133,7 +170,8 @@
     availability: "New",
     description: "A modern silver cuff necklace with a sleek descent design.",
     rating: 4.3,
-    image: "images/shopbycategory/necklace/necklace17.jpg"
+    image: necklace17, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Blossom Veil Dewy Silver Hasli Necklace",
@@ -141,7 +179,8 @@
     availability: "Ready to Ship",
     description: "A fresh dewy design on a silver hasli necklace, ready to ship.",
     rating: 4.6,
-    image: "images/shopbycategory/necklace/necklace18.jpg"
+    image: necklace18, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   },
   {
     name: "Square Charm CZ Silver Cuff Necklace",
@@ -149,17 +188,9 @@
     availability: "Sale",
     description: "Silver cuff necklace with square charm and CZ stones, now on sale.",
     rating: 4.2,
-    image: "images/shopbycategory/necklace/necklace19.jpg"
-  },
-  {
-    name: "Indian Fables Antique Gold Finish Silver Necklace",
-    price: 19999,
-    availability: "Ready to Ship",
-    description: "A stunning antique gold finish silver necklace from the Indian Fables collection.",
-    rating: 4.5,
-    // image: "images/shopbycategory/necklace/necklace20.jpg"
+    image: necklace19, // Referencing imported image
+    randomKey: Math.random().toString(36).substring(2)
   }
 ];
 
 export default NecklaceData;
-

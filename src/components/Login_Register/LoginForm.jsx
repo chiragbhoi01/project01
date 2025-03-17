@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import loginbackground from '/images/Login-RegisterImage/loginbackground.avif'; // Import the background image
-import loginright from '/images/Login-RegisterImage/loginright.avif'; // Import the right-side image
+import loginbackground from '../../assets/image/Login-RegisterImage/loginbackground.avif'; // Import the background image
+import loginright from '../../assets/image/Login-RegisterImage/loginright.avif'; // Import the right-side image
 
 function LoginForm() {
   const [passwordVisible, setPasswordVisible] = useState(false);

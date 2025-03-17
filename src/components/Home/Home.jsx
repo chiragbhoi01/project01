@@ -1,20 +1,17 @@
 import React from "react";
 import HomeCategory from "../Home/HomeCategory";
+
 import { HeroSilder } from "../..";
-import { HomeShopByCategoryData } from "../../../public/images/shopbycategory/HomeShopbyCategoryData";
-import { OurExclusiveCollectionsData } from "../../../public/images/ourexclusivecollections/OurExclusiveCollectionsData";
+
+import HomeShopByCategoryData from "../../assets/image/shopbycategory/HomeShopbyCategoryData";
+import OurExclusiveCollectionsData from "../../assets/image/ourexclusivecollections/OurExclusiveCollectionsData";
 export default function Home() {
   return (
     <>
       <HeroSilder />
-      <HomeCategory
-        tittle={"Shop By Category"}
-        imagesObject={HomeShopByCategoryData}
-      />
-      <HomeCategory
-        tittle={"Our Exclusive Collection"}
-        imagesObject={OurExclusiveCollectionsData}
-      />
+      <HomeCategory tittle={'Shop By Category'} imagesObject={HomeShopByCategoryData}/>
+      <HomeCategory tittle={'Ecxclusive Collection'} imagesObject={OurExclusiveCollectionsData}/>
+
     </>
   );
 }

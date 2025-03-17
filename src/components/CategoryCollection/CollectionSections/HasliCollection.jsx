@@ -1,9 +1,10 @@
 import React from "react";
 
-import Silders from "./Silders"; // Importing the Silders component
-import ItemCollection from "./ItemCollection";
-import { hasliData } from "../../../public/images/ourexclusivecollections/hasli/hasliData";
-import BannerData from "../../../public/images/HeroSilder/BannerData";
+import Silders from "../Silders"; // Importing the Silders component
+import ItemCollection from "../ItemCollection";
+
+import hasliData from "../../../assets/image/ourexclusivecollections/hasli/hasliData";
+import BannerData from "../../../assets/image/HeroSilder/BannerData"
 function HasliCollection() {
 
 
@@ -14,11 +15,12 @@ function HasliCollection() {
       <Silders
         backgroundImage={BannerData.BannerHasli}
         images={hasliData}
-        BannerTittle={'Necklaces'}
+        BannerTittle={'Hasli'}
       />
+
       <ItemCollection
         items={hasliData}
-        
+        tittleName={'Hasli Collection'}
       />
     </div>
     

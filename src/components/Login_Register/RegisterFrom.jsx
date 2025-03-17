@@ -1,8 +1,8 @@
 import { useState } from "react";
-import login1 from "/images/Login-RegisterImage/login1.avif"; 
-import login2 from "/images/Login-RegisterImage/login2.avif"; 
-import login3 from "/images/Login-RegisterImage/login3.avif"; 
-import backgroundImage from "/images/Login-RegisterImage/backgroundlogin.jpg"; 
+import login1 from "../../assets/image/Login-RegisterImage/login1.avif"; 
+import login2 from "../../assets/image/Login-RegisterImage/login2.avif"; 
+import login3 from "../../assets/image/Login-RegisterImage/login3.avif"; 
+import backgroundImage from "../../assets/image/Login-RegisterImage/backgroundlogin.jpg"; 
 
 const ImageBlock = ({ src, alt }) => (
   <img

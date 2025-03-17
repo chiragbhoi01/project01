@@ -64,7 +64,7 @@ function Header() {
                   Collections
                 </NavLink>
 
-                {/* Pop-up for Collections */}
+                {/* Dropdown for Collections */}
                 {isCollectionHover && (
                   <div className="absolute left-0 mt-2 flex space-x-4 bg-white shadow-md rounded-md">
                     <NavLink
@@ -102,7 +102,7 @@ function Header() {
                   Categories
                 </NavLink>
 
-                {/* Pop-up for Categories */}
+                {/* Dropdown for Categories */}
                 {isCategoryHover && (
                   <div className="absolute left-0 mt-2 flex space-x-4 bg-white shadow-md rounded-md">
                     <NavLink

@@ -1,9 +1,17 @@
 import React from 'react'
-import NecklaceCollection from './NecklaceCollection'
+import NecklaceCategory from './CategorySections/NecklaceCategory'
+import BanglesCategory from './CategorySections/BanglesCategory'
+import EarringCategory from './CategorySections/EarringCategory'
+import ChokerCategory from './CategorySections/ChokerCategory'
 
 function Categories() {
   return (
-    <NecklaceCollection/>
+    <div>
+      <NecklaceCategory/>
+      <BanglesCategory/>
+      <EarringCategory/>
+      <ChokerCategory/>
+    </div>
   )
 }
 

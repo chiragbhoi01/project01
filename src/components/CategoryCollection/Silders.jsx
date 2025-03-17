@@ -7,7 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // Reusable component to display a Swiper with a set of images
-function Silders({ images,  BannerTittle ,backgroundImage }) {
+function Sliders({ images, BannerTittle, backgroundImage }) {
   return (
     <div>
       <div
@@ -21,8 +21,6 @@ function Silders({ images,  BannerTittle ,backgroundImage }) {
           position: "relative", // Make sure the background is positioned properly
         }}
       >
-        {/* Semi-transparent overlay for better text/image contrast */}
-
         {/* Title for the banner */}
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-center text-white text-3xl md:text-4xl font-bold z-10">
           {BannerTittle}
@@ -56,10 +54,11 @@ function Silders({ images,  BannerTittle ,backgroundImage }) {
             }}
           >
             {images.map((list, index) => (
-              <SwiperSlide key={index} className="flex justify-center">
+              <SwiperSlide key={list.randomKey} className="flex justify-center">
                 <img
                   src={list.image}
                   alt={list.name}
+                  key={list.randomKey}
                   className="w-auto m-auto h-80 object-cover rounded-lg shadow-lg"
                 />
               </SwiperSlide>
@@ -71,4 +70,7 @@ function Silders({ images,  BannerTittle ,backgroundImage }) {
   );
 }
 
-export default Silders;
+// Prop Types validation
+
+
+export default Sliders;
