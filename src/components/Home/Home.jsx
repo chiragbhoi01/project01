@@ -3,7 +3,7 @@ import HomeCategory from "../Home/HomeCategory";
 
 import { HeroSilder } from "../..";
 
-import HomeShopByCategoryData from "../../assets/image/shopbycategory/HomeShopByCategoryData";
+import HomeShopByCategoryData from "../../assets/image/shopbycategory/HomeShopByCategoryData.js";
 import OurExclusiveCollectionsData from "../../assets/image/ourexclusivecollections/OurExclusiveCollectionsData";
 export default function Home() {
   return (
