@@ -30,12 +30,12 @@ export default function HeroSlider() {
   return (
     <>
       <Swiper {...swiperSettings} className="flex mx-auto w-full sm:w-10/12 lg:w-11/12 my-2">
-        {Object.values(BannerData).map((banner, index) => (
+        {BannerData.map((banner, index) => (  // Directly map over BannerData
           <SwiperSlide key={index}>
-            <Link to={`/ ${banner}`}>
+            <Link to={banner.route}>  {/* Using banner.route directly */}
               <img
-                src={banner}
-                alt={`banner-${index}`}
+                src={banner.image} // Assuming banner has an 'image' key
+                alt={banner.name}  // Use the banner's name as alt text for accessibility
                 className="object-cover w-full h-60 sm:h-80 md:h-96 lg:h-112 xl:h-128"
               />
             </Link>

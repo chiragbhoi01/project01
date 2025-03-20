@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { IoIosStar } from "react-icons/io";
 import PropTypes from "prop-types";
+import { CartContext } from "../../Context/CartContext";
 
 function ItemCollection({ items , tittleName}) {
+    const {addToCart} = useContext(CartContext)
   const handleImageError = (e) => {
     e.target.src = "path/to/fallback-image.jpg"; // Fallback image path
   };
@@ -60,7 +62,7 @@ function ItemCollection({ items , tittleName}) {
 
               {/* Price */}
               <p className="text-lg font-semibold text-gray-600">
-                Price: {item.price > 0 ? `₹${item.price}` : "Price on Request"}
+                Price: {item.price}
               </p>
 
               {/* Rating Section */}
@@ -81,6 +83,7 @@ function ItemCollection({ items , tittleName}) {
                   key={`add-to-cart-${item.id || index}`} // Unique key for each button
                   className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 focus:outline-none"
                   aria-label={`Add ${item.name} to cart`}
+                  onClick={addToCart}
                 >
                   Add to Cart
                 </button>

@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaRegUserCircle, FaShoppingCart, FaSearch, FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import BrandLogo from "../../assets/image/Miss-Gypsy-Logo.png";
+import { CartContext } from "../../Context/CartContext";
 
 function Header() {
+  const { cartCount } = useContext(CartContext);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [itemCount, setItemCount] = useState(10); // Number of items in cart
   const [isCollectionHover, setIsCollectionHover] = useState(false); // Hover state for Collections
   const [isCategoryHover, setIsCategoryHover] = useState(false); // Hover state for Categories
   const [isDropdownOpen, setDropdownOpen] = useState(false); // Dropdown for profile
@@ -14,11 +15,41 @@ function Header() {
     setMenuOpen(false); // Close the mobile menu when clicking a link
   };
 
+  const CollectionLinks = [
+    { name: "Hasli Collection", route: "/haslicollection" },
+    { name: "Loka Collection", route: "/lokacollection" },
+    { name: "Irya Collection", route: "/iryacollection" },
+    { name: "Nakshatra Collection", route: "/nakshatracollection" },
+  ];
+  const CategoriesLinks = [
+    { name: "Necklace Collection", route: "/necklacecollection" },
+    { name: "Bangle Collection", route: "/banglecollection" },
+    { name: "Earring Collection", route: "/earringcollection" },
+    { name: "Chokers Collection", route: "/chokerscollection" },
+  ];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.relative')) {
+        setDropdownOpen(false);
+        setIsCollectionHover(false);
+        setIsCategoryHover(false);
+      }
+    };
+    
+    document.addEventListener('click', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="shadow bg-white sticky top-0 z-20">
       <nav className="px-4 py-2">
         <div className="flex items-center justify-between max-w-screen-xl mx-auto">
-          {/* Logo (Always visible on mobile and desktop) */}
+          {/* Logo */}
           <Link to="/" aria-label="Go to homepage">
             <img className="w-32 md:w-40" src={BrandLogo} alt="Logo" />
           </Link>
@@ -36,20 +67,18 @@ function Header() {
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
             <ul className="flex items-center space-x-6 text-lg">
-              {/* Home link */}
               <li>
                 <NavLink
                   className={({ isActive }) =>
                     isActive ? "text-red-500 hover:underline" : ""
                   }
                   to="/"
-                  onClick={() => setDropdownOpen(true)}
                 >
                   Home
                 </NavLink>
               </li>
 
-              {/* Collections link */}
+              {/* Collections Dropdown */}
               <li
                 className="relative"
                 onMouseEnter={() => setIsCollectionHover(true)}
@@ -63,31 +92,22 @@ function Header() {
                 >
                   Collections
                 </NavLink>
-
-                {/* Dropdown for Collections */}
                 {isCollectionHover && (
-                  <div className="absolute left-0 mt-2 flex space-x-4 bg-white shadow-md rounded-md">
-                    <NavLink
-                      to="/necklace-collection"
-                      className="p-4 hover:bg-gray-200 transition"
-                    >
-                      <h4 className="font-bold text-center">
-                        Necklace Collection
-                      </h4>
-                    </NavLink>
-                    <NavLink
-                      to="/banglescollection"
-                      className="p-4 hover:bg-gray-200 transition"
-                    >
-                      <h4 className="font-bold text-center">
-                        Bangles Collection
-                      </h4>
-                    </NavLink>
+                  <div className="absolute right-0 mt-0 flex flex-col w-max space-y-4 bg-white shadow-md rounded-md p-4">
+                    {CollectionLinks.map((collection, index) => (
+                      <NavLink
+                        key={index}
+                        to={collection.route}
+                        className="hover:bg-gray-200 transition rounded-2xl"
+                      >
+                        <h4 className="font-bold text-center">{collection.name}</h4>
+                      </NavLink>
+                    ))}
                   </div>
                 )}
               </li>
 
-              {/* Categories link */}
+              {/* Categories Dropdown */}
               <li
                 className="relative"
                 onMouseEnter={() => setIsCategoryHover(true)}
@@ -101,27 +121,22 @@ function Header() {
                 >
                   Categories
                 </NavLink>
-
-                {/* Dropdown for Categories */}
                 {isCategoryHover && (
-                  <div className="absolute left-0 mt-2 flex space-x-4 bg-white shadow-md rounded-md">
-                    <NavLink
-                      to="/category-1"
-                      className="p-4 hover:bg-gray-200 transition"
-                    >
-                      <h4 className="font-bold text-center">Hasli</h4>
-                    </NavLink>
-                    <NavLink
-                      to="/category-2"
-                      className="p-4 hover:bg-gray-200 transition"
-                    >
-                      <h4 className="font-bold text-center">Loka</h4>
-                    </NavLink>
+                  <div className="absolute right-0 mt-0 flex flex-col w-max space-y-4 bg-white shadow-md rounded-md p-4">
+                    {CategoriesLinks.map((category, index) => (
+                      <NavLink
+                        key={index}
+                        to={category.route}
+                        className="hover:bg-gray-200 transition rounded-2xl"
+                      >
+                        <h4 className="font-bold text-center">{category.name}</h4>
+                      </NavLink>
+                    ))}
                   </div>
                 )}
               </li>
 
-              {/* Other links */}
+              {/* Other Links */}
               <li>
                 <NavLink
                   className={({ isActive }) =>
@@ -152,9 +167,9 @@ function Header() {
                 aria-label="Shopping cart"
               >
                 <FaShoppingCart />
-                {itemCount > 0 && (
+                {cartCount > 0 && (
                   <div className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                    {itemCount}
+                    {cartCount}
                   </div>
                 )}
               </NavLink>
@@ -168,8 +183,6 @@ function Header() {
                 >
                   <FaRegUserCircle />
                 </NavLink>
-
-                {/* Dropdown */}
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg z-10">
                     <NavLink
@@ -190,7 +203,7 @@ function Header() {
             </div>
           </div>
 
-          {/* Mobile Screen: Show Cart, Login, and Menu Button */}
+          {/* Mobile View */}
           <div className="md:hidden flex items-center space-x-4">
             <NavLink
               className="relative flex items-center text-2xl text-gray-600"
@@ -198,9 +211,9 @@ function Header() {
               aria-label="Shopping cart"
             >
               <FaShoppingCart />
-              {itemCount > 0 && (
+              {cartCount > 0 && (
                 <div className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {itemCount}
+                  {cartCount}
                 </div>
               )}
             </NavLink>
@@ -213,7 +226,6 @@ function Header() {
               <FaRegUserCircle />
             </NavLink>
 
-            {/* Hamburger Menu Icon */}
             <button
               onClick={() => setMenuOpen(!isMenuOpen)}
               className="text-2xl text-gray-600"
@@ -224,7 +236,7 @@ function Header() {
         </div>
       </nav>
 
-      {/* Mobile Menu - Display Links when Menu Icon is clicked */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg p-4">
           <ul className="flex flex-col space-y-4">

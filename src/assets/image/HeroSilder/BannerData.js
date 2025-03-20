@@ -3,24 +3,60 @@ import BannerBangle from '../HeroSilder/BannerBangle.jpg';
 import BannerChoker from '../HeroSilder/BannerChoker.jpg';
 import BannerEarrings from '../HeroSilder/BannerEarrings.jpg';
 import BannerHasli from '../HeroSilder/BannerHasli.jpg';
-import BannerHero1 from '../HeroSilder/BannerHero1.png';
-import BannerHero2 from '../HeroSilder/BannerHero2.png';
-import BannerHero3 from '../HeroSilder/BannerHero3.png';
 import BannerIrya from '../HeroSilder/BannerIrya.jpg';
 import BannerLoka from '../HeroSilder/BannerLoka.jpg';
 import BannerNakshatra from '../HeroSilder/BannerNakshatra.jpg';
 import BannerNecklace from '../HeroSilder/BannerNecklace.jpg';
 
-export default {
-  BannerBangle,
-  BannerChoker,
-  BannerEarrings,
-  BannerHasli,
-  BannerHero1,
-  BannerHero2,
-  BannerHero3,
-  BannerIrya,
-  BannerLoka,
-  BannerNakshatra,
-  BannerNecklace,
-};
+const BannerData = [
+  {
+    image: BannerBangle,
+    route: '/banglecollection',
+    name: 'Bangle',
+    randomKey: 'BannerBangle', // Unique key for each item
+  },
+  {
+    image: BannerChoker,
+    route: '/chokerscollection',
+    name: 'Choker',
+    randomKey: 'BannerChoker', // Unique key for each item
+  },
+  {
+    image: BannerEarrings,
+    route: '/earringcollection',
+    name: 'Earrings',
+    randomKey: 'BannerEarrings', // Unique key for each item
+  },
+  {
+    image: BannerHasli,
+    route: '/haslicollection',
+    name: 'Hasli',
+    randomKey: 'BannerHasli', // Unique key for each item
+  },
+  {
+    image: BannerIrya,
+    route: '/iryacollection',
+    name: 'Irya',
+    randomKey: 'BannerIrya', // Unique key for each item
+  },
+  {
+    image: BannerLoka,
+    route: '/lokacollection',
+    name: 'Loka',
+    randomKey: 'BannerLoka', // Unique key for each item
+  },
+  {
+    image: BannerNakshatra,
+    route: '/nakshatracollection',
+    name: 'Nakshatra',
+    randomKey: 'BannerNakshatra', // Unique key for each item
+  },
+  {
+    image: BannerNecklace,
+    route: '/necklacecollection',
+    name: 'Necklace',
+    randomKey: 'BannerNecklace', // Unique key for each item
+  },
+];
+
+export default BannerData;
