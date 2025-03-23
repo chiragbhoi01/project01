@@ -4,7 +4,7 @@ import Silders from "../Silders"; // Importing the Silders component
 import ItemCollection from "../ItemCollection";
 
 import chokersData from "../../../assets/image/shopbycategory/chokers/chokersData"
-import BannerData from "../../../assets/image/HeroSilder/BannerData"
+import { BannerImage } from "../../../assets/image/HeroSilder/BannerData";
 function ChokerCategory() {
 
 
@@ -13,7 +13,7 @@ function ChokerCategory() {
 
       {/* Pass the images and backgroundImage props to the Silders component */}
       <Silders
-        backgroundImage={BannerData.BannerChoker}
+        backgroundImage={BannerImage.BannerChoker}
         images={chokersData}
         BannerTittle={'Chockers'}
       />

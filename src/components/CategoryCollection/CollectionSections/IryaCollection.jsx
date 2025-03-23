@@ -4,7 +4,7 @@ import Silders from "../Silders"; // Importing the Silders component
 import ItemCollection from "../ItemCollection";
 
 import iryaData from '../../../assets/image/ourexclusivecollections/irya/iryaData'
-import BannerData from "../../../assets/image/HeroSilder/BannerData"
+import { BannerImage } from "../../../assets/image/HeroSilder/BannerData"
 function IryaCollection() {
 
 
@@ -13,7 +13,7 @@ function IryaCollection() {
 
       {/* Pass the images and backgroundImage props to the Silders component */}
       <Silders
-        backgroundImage={BannerData.BannerIrya}
+        backgroundImage={BannerImage.BannerIrya}
         images={iryaData}
         BannerTittle={'Irya'}
       />

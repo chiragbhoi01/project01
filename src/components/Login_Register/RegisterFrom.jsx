@@ -81,7 +81,7 @@ function RegisterForm() {
       <div className="min-h-screen flex items-center justify-center max-w-screen-lg mx-auto p-4">
         <div className="grid md:grid-cols-2 gap-5 w-full">
           {/* Left Column with Images */}
-          <div className="space-y-5">
+          <div className="space-y-5 min-h-100">
             <ImageBlock
               src={login1}
               alt="Top Image"
@@ -102,8 +102,7 @@ function RegisterForm() {
           <div className="flex justify-center">
             <form
               onSubmit={handleSubmit}
-              className="w-full max-w-md shadow-sm p-8 rounded-lg bg-white bg-opacity-80"
-              style={{ height: "auto" }} // Ensure it adapts to content height
+              className="w-full sm:w-[450px] lg:w-[500px] p-8 bg-white bg-opacity-90 rounded-lg shadow-lg"
             >
               <h2 className="text-2xl font-semibold text-black text-center mb-6">
                 Welcome To Our Family <br />

@@ -4,7 +4,7 @@ import Silders from "../Silders"; // Importing the Silders component
 import ItemCollection from "../ItemCollection";
 
 import lokaData from "../../../assets/image/ourexclusivecollections/loka/lokaData";
-import BannerData from "../../../assets/image/HeroSilder/BannerData"
+import { BannerImage } from "../../../assets/image/HeroSilder/BannerData";
 function LokaCollection() {
 
 
@@ -13,7 +13,7 @@ function LokaCollection() {
 
       {/* Pass the images and backgroundImage props to the Silders component */}
       <Silders
-        backgroundImage={BannerData.BannerLoka}
+        backgroundImage={BannerImage.BannerLoka}
         images={lokaData}
         BannerTittle={'Loka'}
       />

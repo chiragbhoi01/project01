@@ -4,7 +4,7 @@ import Silders from "../Silders"; // Importing the Silders component
 import ItemCollection from "../ItemCollection";
 
 import earringsData from "../../../assets/image/shopbycategory/earrings/earringsData"
-import BannerData from "../../../assets/image/HeroSilder/BannerData"
+import { BannerImage } from "../../../assets/image/HeroSilder/BannerData";
 function EarringCategory() {
 
 
@@ -13,7 +13,7 @@ function EarringCategory() {
 
       {/* Pass the images and backgroundImage props to the Silders component */}
       <Silders
-        backgroundImage={BannerData.BannerEarrings}
+        backgroundImage={BannerImage.BannerEarrings}
         images={earringsData}
         BannerTittle={'Earrings'}
       />

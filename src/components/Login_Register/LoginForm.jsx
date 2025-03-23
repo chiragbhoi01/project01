@@ -52,26 +52,27 @@ function LoginForm() {
   };
 
   return (
-    <div className="max-w-screen-sm mx-auto min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4">
       <div className="flex w-full bg-gradient-to-r from-[#f87060] to-[#102542] rounded-lg shadow-lg overflow-hidden">
         {/* Left side image */}
-        <div className="flex w-full md:w-1/2">
+        <div className="hidden md:flex w-1/2">
           <img src={loginright} className="w-full h-full object-cover" alt="Login Right Side" />
         </div>
 
-        {/* Right side form */}
+        {/* Right side form with background image */}
         <div
           style={{
-            background: `url(${loginbackground})`,  // Correct background image URL syntax
+            backgroundImage: `url(${loginbackground})`,  // Background image set here
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             color: '#fff'
           }}
-          className="flex items-center justify-center w-full md:w-1/2 bg-cover"
+          className="flex items-center justify-center w-full md:w-1/2 bg-cover min-h-screen px-4 sm:px-8"
         >
-          <form onSubmit={handleSubmit} className="w-full p-6 sm:p-12 space-y-6 bg-opacity-70 bg-[#102542] rounded-2xl shadow-xl">
+          {/* Form Box */}
+          <form onSubmit={handleSubmit} className="w-full sm:w-96 p-6 sm:p-12 space-y-6 bg-opacity-70 bg-[#102542] rounded-2xl shadow-xl">
             <div className="text-center space-y-3">
-              <h2 className="text-4xl font-bold text-white">WELCOME BACK!</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white">WELCOME BACK!</h2>
               <p className="text-lg text-white">Please log in to your account</p>
 
               <div className="space-y-6">

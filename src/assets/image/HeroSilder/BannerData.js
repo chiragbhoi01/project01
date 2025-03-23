@@ -1,4 +1,3 @@
-// imageExport.js
 import BannerBangle from '../HeroSilder/BannerBangle.jpg';
 import BannerChoker from '../HeroSilder/BannerChoker.jpg';
 import BannerEarrings from '../HeroSilder/BannerEarrings.jpg';
@@ -58,5 +57,17 @@ const BannerData = [
     randomKey: 'BannerNecklace', // Unique key for each item
   },
 ];
+
+// Export the image names as an object
+export const BannerImage = {
+  BannerBangle,
+  BannerChoker,
+  BannerEarrings,
+  BannerHasli,
+  BannerIrya,
+  BannerLoka,
+  BannerNakshatra,
+  BannerNecklace,
+};
 
 export default BannerData;

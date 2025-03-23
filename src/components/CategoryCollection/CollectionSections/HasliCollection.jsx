@@ -4,7 +4,7 @@ import Silders from "../Silders"; // Importing the Silders component
 import ItemCollection from "../ItemCollection";
 
 import hasliData from "../../../assets/image/ourexclusivecollections/hasli/hasliData";
-import BannerData from "../../../assets/image/HeroSilder/BannerData"
+import { BannerImage } from "../../../assets/image/HeroSilder/BannerData";
 function HasliCollection() {
 
 
@@ -13,7 +13,7 @@ function HasliCollection() {
 
       {/* Pass the images and backgroundImage props to the Silders component */}
       <Silders
-        backgroundImage={BannerData.BannerHasli}
+        backgroundImage={BannerImage.BannerHasli}
         images={hasliData}
         BannerTittle={'Hasli'}
       />
