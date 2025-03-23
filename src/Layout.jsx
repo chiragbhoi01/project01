@@ -13,6 +13,7 @@ import NecklaceCategory from "./components/CategoryCollection/CategorySections/N
 import BanglesCategory from "./components/CategoryCollection/CategorySections/BanglesCategory";
 import ChokerCategory from "./components/CategoryCollection/CategorySections/ChokerCategory";
 import EarringCategory from "./components/CategoryCollection/CategorySections/EarringCategory";
+import Cart from "./components/Cart";
 
 function Layout
 () {
@@ -34,7 +35,7 @@ function Layout
         <Route path="/banglecollection" element={<BanglesCategory/>}/>
         <Route path="/chokerscollection" element={<ChokerCategory/>} />
         <Route path="/earringcollection" element={<EarringCategory/>}/>
-
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
       
   );
