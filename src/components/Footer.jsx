@@ -1,5 +1,5 @@
 import React from 'react';
-import BrandLogo from '../../assets/image/Miss-Gypsy-Logo.png'
+import BrandLogo from "../assets/image/Miss-Gypsy-Logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';

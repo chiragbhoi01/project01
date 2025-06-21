@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Auth from "./components/Auth";
+// import Auth from "./components/Auth";
 import ProductSuggestion from "./components/ProductSuggestion";
 import VoiceSearch from "./components/VoiceSearch";
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <div style={{ padding: 20 }}>
       <h1>Jewellery E-commerce CloudCraft 2025</h1>
-      <Auth />
+      {/* <Auth /> */}
       <ProductSuggestion />
       <VoiceSearch onSearch={handleSearch} />
       <h2>Search Results for: {query}</h2>

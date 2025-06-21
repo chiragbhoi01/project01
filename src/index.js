@@ -1,7 +1,7 @@
 // Importing components from their respective paths
 
-import Footer from "./components/Home/Footer";
-import Header from "./components/Home/Header";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import HeroSilder from "./components/Home/HeroSilder";
 import About from "./components/About";
 import Home from './components/Home/Home';
