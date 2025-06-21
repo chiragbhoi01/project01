@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import { BrowserRouter } from "react-router-dom"; // Corrected the import for BrowserRouter
 import { Footer, Header } from "../src/index";
 import { CartProvider } from "./Context/CartContext";
+import App from "./App";
 
 const root = document.getElementById("root");
 
@@ -12,6 +13,7 @@ ReactDOM.createRoot(root).render(
     <BrowserRouter>
       <CartProvider>
       <Header />
+      {/* <App/> */}
         <Layout />
         <Footer />
       </CartProvider>
